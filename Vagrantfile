@@ -1,10 +1,11 @@
 Vagrant.configure(2) do |config|
   # Ubuntu 15.10
   config.vm.box = "ubuntu/wily64"
-  config.vm.synced_folder "C:/Daten/workspaces/vagrant1", "/sync/workspaces"
+  
 
   config.vm.provider "virtualbox" do |vb|
     # Display the VirtualBox GUI when booting the machine
+    vb.name = "vagrant-wily64-devbox"
     vb.gui = true
     vb.memory = 2048
   end
